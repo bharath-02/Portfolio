@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import 'mobile';
 * {
     box-sizing: border-box;
 }
@@ -41,10 +42,6 @@ header {
     width: 100%;
 }
 
-.text-secondary {
-    color: $secondary-color;
-}
-
 main {
     padding: 4rem;
     height: 100%;
@@ -61,7 +58,7 @@ main {
     &#home {
         overflow: hidden;
         h1 {
-            margin-top: 5vh;
+            margin-top: 20vh;
         }
     }
 }

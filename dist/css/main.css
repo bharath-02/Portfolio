@@ -170,6 +170,9 @@ header {
   z-index: 2;
   width: 100%; }
 
+.text-secondary {
+  color: #eece1a; }
+
 main {
   padding: 4rem;
   height: 100%; }

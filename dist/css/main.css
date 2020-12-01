@@ -55,7 +55,7 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("../image/profile.jpeg");
+      background: url("../image/profile_pic.jpeg");
       border-radius: 50%;
       border: solid 3px #eece1a; }
   .menu .nav-item {
@@ -199,7 +199,7 @@ main {
   align-items: center;
   margin-top: 1rem; }
   .boxes div {
-    font-size: 2rem;
+    font-size: 1.3rem;
     border: 2px solid #fff;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
@@ -228,18 +228,32 @@ main {
   background: #c4c4c4;
   color: #fff; }
 
+.btn-res {
+  float: left;
+  margin: 1rem 1rem;
+  display: block;
+  font-size: 20px;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  background: #444;
+  color: #fff; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: #2b2b2b;
   color: #fff;
-  height: 60px; }
+  height: 60px;
+  width: 100%; }
 
 @media screen and (min-width: 1171px) {
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
+  main#home h1 {
+    font-size: 4rem; }
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
@@ -250,6 +264,8 @@ main {
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
+  main#home h1 {
+    font-size: 3rem; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -266,18 +282,24 @@ main {
     height: 30vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
-      background: url("../image/profile_small.jpeg");
+      background: url("../image/profile_pic_small.jpeg");
       width: 150px;
       height: 150px; }
   .about-info {
     grid-template-areas: 'bio-image' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  button.btn-res {
+    float: none;
+    display: block;
+    margin: 1rem auto; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   main#home h1 {
-    margin-top: 20vh;
+    margin-top: 19vh;
     font-size: 5rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  main#contact h1 {
+    font-size: 4rem; } }

@@ -7,6 +7,9 @@
 
 // Desktops & Laptops
 @include mediaLg {
+    main#home h1 {
+        font-size: 4rem;
+    }
     .projects {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -21,6 +24,9 @@
             line-height: 1;
             margin-bottom: 1rem;
         }
+    }
+    main#home h1 {
+        font-size: 3rem;
     }
     ul.menu-nav,
     div.menu-branding {
@@ -40,7 +46,7 @@
         height: 30vh;
         transform: translate3d(100%, 0, 0);
         .portrait {
-            background: url('../image/profile_small.jpeg');
+            background: url('../image/profile_pic_small.jpeg');
             width: 150px;
             height: 150px;
         }
@@ -52,15 +58,23 @@
     .projects {
         grid-template-columns: repeat(2, 1fr);
     }
+    button.btn-res {
+        float: none;
+        display: block;
+        margin: 1rem auto;
+    }
 }
 
 // Smartphones
 @include mediaSm {
     main#home h1 {
-        margin-top: 20vh;
+        margin-top: 19vh;
         font-size: 5rem;
     }
     .projects {
         grid-template-columns: 1fr;
+    }
+    main#contact h1 {
+        font-size: 4rem;
     }
 }

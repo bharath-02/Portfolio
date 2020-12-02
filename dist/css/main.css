@@ -9,7 +9,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: #000;
     transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -40,14 +40,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #f2f2f2;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #fff;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -57,14 +57,15 @@
       height: 250px;
       background: url("../image/profile_pic.jpeg");
       border-radius: 50%;
-      border: solid 3px #eece1a; }
+      border: solid 5px #0066ff; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #eece1a; }
+      color: #0066ff;
+      font-weight: 500; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -72,11 +73,11 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a; }
+      color: #0066ff; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -90,12 +91,18 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+.nav-item:nth-child(5) {
+  transition-delay: 0.5s; }
+
+.nav-item:nth-child(6) {
+  transition-delay: 0.6s; }
+
 * {
   box-sizing: border-box; }
 
 body {
-  background: #444;
-  color: #fff;
+  background: #fff;
+  color: #000;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -111,7 +118,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.9); }
+      background: rgba(255, 255, 255, 0.9); }
 
 h1,
 h2,
@@ -127,7 +134,7 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    background: rgba(255, 255, 255, 0.5); }
 
 a {
   color: #fff;
@@ -139,18 +146,19 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #eece1a; }
+  color: #0066ff; }
 
 main {
   padding: 4rem;
   min-height: calc(100vh - 60px); }
   main .icons {
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
     main .icons a {
-      padding: 0.4rem; }
+      padding: 0.4rem;
+      color: #0066ff; }
       main .icons a:hover {
-        color: #eece1a;
-        transition: all 0.5s ease-out; }
+        color: #0066ff; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -165,7 +173,7 @@ main {
     grid-area: bio-image;
     margin: auto;
     border-radius: 50%;
-    border: 3px solid #eece1a; }
+    border: 3px solid #0066ff; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -176,9 +184,90 @@ main {
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
-    background: #515151;
+    background: white;
     padding: 0.5rem;
-    border-bottom: #eece1a 5px solid; }
+    border-bottom: #0066ff 5px solid; }
+
+main#skills h1 {
+  font-size: 5rem; }
+
+.skills-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'job1' 'job2' 'job3' 'job4' 'job5';
+  grid-template-columns: 1fr; }
+  .skills-info .job-1 {
+    grid-area: job1; }
+    .skills-info .job-1 .flex {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1rem; }
+      .skills-info .job-1 .flex .icon {
+        margin-left: 1rem; }
+        .skills-info .job-1 .flex .icon p {
+          text-align: center;
+          margin-top: 0;
+          font-weight: 500; }
+  .skills-info .job-2 {
+    grid-area: job2; }
+    .skills-info .job-2 .flex {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1rem; }
+      .skills-info .job-2 .flex .icon {
+        margin-left: 1rem; }
+        .skills-info .job-2 .flex .icon p {
+          text-align: center;
+          margin-top: 0;
+          font-weight: 500; }
+  .skills-info .job-3 {
+    grid-area: job3; }
+    .skills-info .job-3 .flex {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1rem; }
+      .skills-info .job-3 .flex .icon {
+        margin-left: 1rem; }
+        .skills-info .job-3 .flex .icon p {
+          text-align: center;
+          margin-top: 0;
+          font-weight: 500; }
+  .skills-info .job-4 {
+    grid-area: job4; }
+    .skills-info .job-4 .flex {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1rem; }
+      .skills-info .job-4 .flex .icon {
+        margin-left: 1rem; }
+        .skills-info .job-4 .flex .icon p {
+          text-align: center;
+          margin-top: 0;
+          font-weight: 500; }
+  .skills-info .job-5 {
+    grid-area: job5; }
+    .skills-info .job-5 .flex {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1rem; }
+      .skills-info .job-5 .flex .icon {
+        margin-left: 1rem; }
+        .skills-info .job-5 .flex .icon p {
+          text-align: center;
+          margin-top: 0;
+          font-weight: 500; }
+  .skills-info .job {
+    margin-top: 50px;
+    background: white;
+    padding: 0.5rem;
+    border-bottom: #0066ff 5px solid;
+    box-shadow: 5px 10px 18px #888888; }
+    .skills-info .job h3 {
+      font-size: 30px;
+      font-weight: 450; }
+    .skills-info .job h6 {
+      font-size: 20px;
+      font-weight: 400; }
 
 .projects {
   display: grid;
@@ -189,8 +278,32 @@ main {
     border: 3px solid #fff; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #eece1a;
+      border-color: #0066ff;
       transition: all 0.5s ease-out; }
+
+.education-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'job3 job2 job1';
+  grid-template-columns: repeat(3, 1fr); }
+  .education-info .job-3 {
+    grid-area: job3; }
+  .education-info .job-2 {
+    grid-area: job2; }
+  .education-info .job-1 {
+    grid-area: job1; }
+  .education-info .job {
+    margin-top: 50px;
+    background: white;
+    padding: 0.5rem;
+    border-bottom: #0066ff 5px solid;
+    box-shadow: 5px 10px 18px #888888; }
+    .education-info .job h3 {
+      font-size: 30px;
+      font-weight: 450; }
+    .education-info .job h6 {
+      font-size: 20px;
+      font-weight: 400; }
 
 .boxes {
   display: flex;
@@ -200,33 +313,43 @@ main {
   margin-top: 1rem; }
   .boxes div {
     font-size: 1.3rem;
-    border: 2px solid #fff;
+    border: 2px solid #0066ff;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
+    border-radius: 5px;
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
-      background: #eece1a;
-      color: #000; }
+      background: #0066ff;
+      color: #fff; }
       .boxes div:hover span {
-        color: #000; }
+        color: #fff; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #eece1a;
-    color: #000; }
 
 .btn-dark {
-  background: black;
-  color: #fff; }
+  background: #0066ff;
+  color: #fff;
+  border-radius: 5px; }
+  .btn-dark:hover {
+    background: #fff;
+    color: #0066ff;
+    border: 2px solid #0066ff;
+    border-radius: 5px; }
 
 .btn-light {
-  background: #c4c4c4;
-  color: #fff; }
+  background: #fff;
+  color: #0066ff;
+  border: 2px solid #0066ff;
+  border-radius: 5px; }
+  .btn-light:hover {
+    background: #0066ff;
+    color: #fff;
+    border-radius: 5px; }
 
 .btn-res {
   float: left;
@@ -236,18 +359,22 @@ main {
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
-  background: #444;
-  color: #fff; }
+  background: #0066ff;
+  color: #fff;
+  border-radius: 10px; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #2b2b2b;
-  color: #fff;
+  background: #e6e6e6;
+  color: #000;
   height: 60px;
   width: 100%; }
 
 @media screen and (min-width: 1171px) {
+  .skills-info {
+    grid-template-areas: 'job1' 'job2' 'job3' 'job4' 'job5';
+    grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
@@ -275,11 +402,15 @@ main {
     div.menu-branding.show {
       transform: translate3d(0, 0, 0); }
   .menu-nav {
-    height: 70vh;
+    height: 75vh;
     transform: translate3d(-100%, 0, 0);
-    font-size: 24px; }
+    font-size: 16px; }
+    .menu-nav .nav-item {
+      font-size: 0.5rem; }
+      .menu-nav .nav-item .nav-link {
+        font-size: 1.2rem; }
   .menu-branding {
-    height: 30vh;
+    height: 25vh;
     transform: translate3d(100%, 0, 0); }
     .menu-branding .portrait {
       background: url("../image/profile_pic_small.jpeg");
@@ -288,8 +419,15 @@ main {
   .about-info {
     grid-template-areas: 'bio-image' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
+  main#skills h1 {
+    font-size: 4rem; }
   .projects {
     grid-template-columns: repeat(2, 1fr); }
+  main#education h1 {
+    font-size: 4rem; }
+  .education-info {
+    grid-template-areas: 'job3' 'job2' 'job1';
+    grid-template-columns: 1fr; }
   button.btn-res {
     float: none;
     display: block;
@@ -297,9 +435,19 @@ main {
 
 @media screen and (max-width: 400px) {
   main#home h1 {
-    margin-top: 19vh;
-    font-size: 5rem; }
+    margin-top: 4%;
+    font-size: 2.8rem; }
+  main#home h2 {
+    font-size: 1rem; }
+  main#home .btn-res {
+    font-size: 1rem; }
+  main#about h1 {
+    font-size: 3rem; }
+  main#skills h1 {
+    font-size: 2.5rem; }
   .projects {
     grid-template-columns: 1fr; }
+  main#education h1 {
+    font-size: 3.2rem; }
   main#contact h1 {
     font-size: 4rem; } }

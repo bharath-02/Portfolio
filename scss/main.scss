@@ -51,11 +51,12 @@ main {
     min-height: calc(100vh - 60px);
     .icons {
         margin-top: 1rem;
+        margin-bottom: 1rem;
         a {
             padding: 0.4rem;
+            color: $secondary-color;
             &:hover {
                 color: $secondary-color;
-                @include easeOut();
             }
         }
     }
@@ -99,6 +100,113 @@ main {
     }
 }
 
+// skills page Styles
+main#skills h1 {
+    font-size: 5rem;
+}
+
+.skills-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 'job1' 'job2' 'job3' 'job4' 'job5';
+    grid-template-columns: 1fr;
+    .job-1 {
+        grid-area: job1;
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            .icon {
+                margin-left: 1rem;
+                p {
+                    text-align: center;
+                    margin-top: 0;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .job-2 {
+        grid-area: job2;
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            .icon {
+                margin-left: 1rem;
+                p {
+                    text-align: center;
+                    margin-top: 0;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .job-3 {
+        grid-area: job3;
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            .icon {
+                margin-left: 1rem;
+                p {
+                    text-align: center;
+                    margin-top: 0;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .job-4 {
+        grid-area: job4;
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            .icon {
+                margin-left: 1rem;
+                p {
+                    text-align: center;
+                    margin-top: 0;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .job-5 {
+        grid-area: job5;
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            .icon {
+                margin-left: 1rem;
+                p {
+                    text-align: center;
+                    margin-top: 0;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .job {
+        margin-top: 50px;
+        background: lighten($primary-color, 5);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+        box-shadow: 5px 10px 18px #888888;
+        h3 {
+            font-size: 30px;
+            font-weight: 450;
+        }
+        h6 {
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+}
+
 // Work page Styles
 .projects {
     display: grid;
@@ -115,6 +223,38 @@ main {
     }
 }
 
+// education page Styles
+.education-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: 'job3 job2 job1';
+    grid-template-columns: repeat(3, 1fr);
+    .job-3 {
+        grid-area: job3;
+    }
+    .job-2 {
+        grid-area: job2;
+    }
+    .job-1 {
+        grid-area: job1;
+    }
+    .job {
+        margin-top: 50px;
+        background: lighten($primary-color, 5);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+        box-shadow: 5px 10px 18px #888888;
+        h3 {
+            font-size: 30px;
+            font-weight: 450;
+        }
+        h6 {
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+}
+
 // Contact page Styles
 .boxes {
     display: flex;
@@ -124,16 +264,17 @@ main {
     margin-top: 1rem;
     div {
         font-size: 1.3rem;
-        border: 2px solid #fff;
+        border: 2px solid $secondary-color;
         padding: 1.5rem 2.5rem;
         margin-bottom: 3rem;
+        border-radius: 5px;
         @include easeOut();
         &:hover {
             padding: 0.5rem 1.5rem;
             background: $secondary-color;
-            color: set-text-color($secondary-color);
+            color: #fff;
             span {
-                color: set-text-color($secondary-color);
+                color: #fff;
             }
         }
     }
@@ -145,22 +286,33 @@ main {
     padding: 0.5rem 1rem;
     border: 0;
     margin-bottom: 0.3rem;
-    &:hover {
-        background: $secondary-color;
-        color: set-text-color($secondary-color);
-    }
 }
 
 .btn-dark {
     @extend .btn;
-    background: darken($primary-color, 50);
+    background: $secondary-color;
     color: #fff;
+    border-radius: 5px;
+    &:hover {
+        background: #fff;
+        color: $secondary-color;
+        border: 2px solid $secondary-color;
+        border-radius: 5px;
+    }
 }
 
+// darken($secondary-color, 50)
 .btn-light {
     @extend .btn;
-    background: lighten($primary-color, 50);
-    color: #fff;
+    background: #fff;
+    color: $secondary-color;
+    border: 2px solid $secondary-color;
+    border-radius: 5px;
+    &:hover {
+        background: $secondary-color;
+        color: #fff;
+        border-radius: 5px;
+    }
 }
 
 .btn-res {
@@ -171,8 +323,9 @@ main {
     padding: 0.5rem 1rem;
     border: 0;
     margin-bottom: 0.3rem;
-    background: #444;
+    background: $secondary-color;
     color: #fff;
+    border-radius: 10px;
 }
 
 // Footer Styles

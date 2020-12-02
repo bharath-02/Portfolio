@@ -80,7 +80,7 @@
             height: 250px;
             background: url('../image/profile_pic.jpeg');
             border-radius: 50%;
-            border: solid 3px $secondary-color;
+            border: solid 5px #0066ff;
         }
     }
     .nav-item {
@@ -92,6 +92,7 @@
         }
         &.current>a {
             color: $secondary-color;
+            font-weight: 500;
         }
     }
     .nav-link {
@@ -111,7 +112,7 @@
 }
 
 // Delay each nav-item slide by 0.1 sec
-@for $x from 1 through 4 {
+@for $x from 1 through 6 {
     .nav-item:nth-child(#{$x}) {
         transition-delay: $x * 0.1s;
     }

@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
     <title>View My Work</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
     <!-- Font-Awesome -->
     <script src="https://kit.fontawesome.com/450bf34190.js" crossorigin="anonymous"></script>
     <!-- Custom Stylesheets -->
@@ -38,11 +41,11 @@
                 <li class="nav-item">
                     <a href="about.html" class="nav-link">About Me</a>
                 </li>
-                <li class="nav-item">
-                    <a href="skills.html" class="nav-link">Skills</a>
-                </li>
                 <li class="nav-item current">
                     <a href="work.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="skills.html" class="nav-link">Skills</a>
                 </li>
                 <li class="nav-item">
                     <a href="education.html" class="nav-link">Education</a>
@@ -64,56 +67,125 @@
         </h2>
         <div class="projects">
             <div class="item">
-                <a href="#">
-                    <img src="image/project/project1.jpg" alt="Project">
+                <img src="image/project/project1.jpg" alt="Project" data-toggle="modal" data-target="#project1Modal">
+                <a href="https://nifty-euclid-62bdae.netlify.app/" class="btn-light" target="_blank">
+                    <i class="fas fa-eye"></i>View Project
                 </a>
-                <a href="#" class="btn-light">
-                    <i class="fas fa-eye"></i>Project
-                </a>
-                <a href="#" class="btn-dark">
+                <a href="https://github.com/bharath-02/Catch-ur-thoughts" class="btn-dark" target="_blank">
                     <i class="fab fa-github"></i>github
                 </a>
             </div>
             <div class="item">
-                <a href="#">
-                    <img src="image/project/project2.jpg" alt="Project">
+                <img src="image/project/project2.jpg" alt="Project" data-toggle="modal" data-target="#project2Modal">
+                <a href="https://covid19-tracker-app001.netlify.app/" class="btn-light" target="_blank">
+                    <i class="fas fa-eye"></i>View Project
                 </a>
-                <a href="#" class="btn-light">
-                    <i class="fas fa-eye"></i>Project
-                </a>
-                <a href="#" class="btn-dark">
+                <a href="https://github.com/bharath-02/COVID-Tracker/tree/main/covid-tracker" class="btn-dark" target="_blank">
                     <i class="fab fa-github"></i>github
                 </a>
             </div>
             <div class="item">
-                <a href="#">
-                    <img src="image/project/project3.jpg" alt="Project">
+                <img src="image/project/project3.png" alt="Project" data-toggle="modal" data-target="#project3Modal">
+                <a href="https://weather-apppp.netlify.app/" class="btn-light" target="_blank">
+                    <i class="fas fa-eye"></i>ViewProject
                 </a>
-                <a href="#" class="btn-light">
-                    <i class="fas fa-eye"></i>Project
-                </a>
-                <a href="#" class="btn-dark">
-                    <i class="fab fa-github"></i>github
-                </a>
-            </div>
-            <div class="item">
-                <a href="#">
-                    <img src="image/project/project3.jpg" alt="Project">
-                </a>
-                <a href="#" class="btn-light">
-                    <i class="fas fa-eye"></i>Project
-                </a>
-                <a href="#" class="btn-dark">
+                <a href="https://github.com/bharath-02/Weather-App/tree/main/weather" class="btn-dark" target="_blank">
                     <i class="fab fa-github"></i>github
                 </a>
             </div>
         </div>
     </main>
+    <!-- Project1 -->
+    <div class="modal fade" id="project1Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Catch Ur Thoughts.....</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    A modern social-media app built with MERN stack, in which you can post your thoughts, view others posts, like, comment, delete, etc........
+                </div>
+                <div class="modal-body">
+                    <h6>Technologies used:</h6>
+                    <ul>
+                        <li>React</li>
+                        <li>MongoDB</li>
+                        <li>NodeJS</li>
+                        <li>ExpressJS</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project2 -->
+    <div class="modal fade" id="project2Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Covid-19 Tracker</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    A simple covid19 tracker app that allows you to get current statistics, based on Country-wise or global.</div>
+                <div class="modal-body">
+                    <h6>Technologies used:</h6>
+                    <ul>
+                        <li>React</li>
+                        <li>ChartJS</li>
+                        <li>MaterialUI</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project3 -->
+    <div class="modal fade" id="project3Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Weather App</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    A simple weather app that allows you to get current weather information, based on the city you enter. </div>
+                <div class="modal-body">
+                    <h6>Technologies used:</h6>
+                    <ul>
+                        <li>React</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <footer id="main-footer">
         copyright &copy; 2020
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

@@ -1,11 +1,10 @@
 // Seperate file for variables and mixins
 $primary-color: #fff;
 $secondary-color: #0066ff;
-// 
 $show-home-image: true;
-$home-image: url(../image/background.jpg);
+$home-image: url(../image/background1.jpg);
 $lg-home-image: url(../image/background-small.jpg);
-$background-opacity: 0.9;
+$background-opacity: 0.4;
 @mixin easeOut {
     transition: all 0.5s ease-out;
 }

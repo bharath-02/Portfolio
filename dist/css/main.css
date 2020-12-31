@@ -108,7 +108,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../image/background.jpg);
+    background: url(../image/background1.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img .overlay {
@@ -118,7 +118,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(255, 255, 255, 0.9); }
+      background: rgba(255, 255, 255, 0.4); }
 
 h1,
 h2,
@@ -153,6 +153,7 @@ main {
   min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem;
+    margin-left: 1rem;
     margin-bottom: 1rem; }
     main .icons a {
       padding: 0.4rem;
@@ -171,6 +172,8 @@ main {
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bio-image;
+    width: 200px;
+    height: 200px;
     margin: auto;
     border-radius: 50%;
     border: 3px solid #0066ff; }
@@ -270,16 +273,24 @@ main#skills h1 {
       font-weight: 400; }
 
 .projects {
-  display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr); }
-  .projects img {
-    width: 100%;
-    border: 3px solid #fff; }
-    .projects img:hover {
-      opacity: 0.5;
-      border-color: #0066ff;
-      transition: all 0.5s ease-out; }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+  .projects .item {
+    width: 45%;
+    cursor: pointer;
+    margin-top: 2%; }
+    .projects .item img {
+      border-radius: 15px;
+      border: 2px solid black;
+      width: 100%;
+      margin: 20px auto; }
+      .projects .item img:hover {
+        opacity: 0.5;
+        border-color: #0066ff;
+        transition: all 0.5s ease-out; }
+    .projects .item a {
+      text-align: center; }
 
 .education-info {
   display: grid;
@@ -313,6 +324,7 @@ main#skills h1 {
   margin-top: 1rem; }
   .boxes div {
     font-size: 1.3rem;
+    margin: 5px;
     border: 2px solid #0066ff;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
@@ -374,9 +386,7 @@ main#skills h1 {
 @media screen and (min-width: 1171px) {
   .skills-info {
     grid-template-areas: 'job1' 'job2' 'job3' 'job4' 'job5';
-    grid-template-columns: 1fr; }
-  .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: 1fr; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   main#home h1 {
@@ -385,6 +395,8 @@ main#skills h1 {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
+  #bg-img {
+    background: url(../image/medium-background.jpg) !important; }
   main {
     align-items: center;
     text-align: center; }
@@ -422,7 +434,9 @@ main#skills h1 {
   main#skills h1 {
     font-size: 4rem; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); }
+    flex-direction: column; }
+    .projects .item {
+      width: 100%; }
   main#education h1 {
     font-size: 4rem; }
   .education-info {
@@ -434,8 +448,10 @@ main#skills h1 {
     margin: 1rem auto; } }
 
 @media screen and (max-width: 400px) {
+  #bg-img {
+    background: url(../image/small-background.jpg) !important; }
   main#home h1 {
-    margin-top: 4%;
+    margin-top: 10%;
     font-size: 2.8rem; }
   main#home h2 {
     font-size: 1rem; }
@@ -446,7 +462,9 @@ main#skills h1 {
   main#skills h1 {
     font-size: 2.5rem; }
   .projects {
-    grid-template-columns: 1fr; }
+    flex-direction: column; }
+    .projects .item {
+      width: 100%; }
   main#education h1 {
     font-size: 3.2rem; }
   main#contact h1 {

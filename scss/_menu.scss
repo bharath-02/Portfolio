@@ -38,7 +38,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.9;
+    opacity: 1;
     visibility: hidden;
     &.show {
         visibility: visible;
@@ -79,6 +79,8 @@
             width: 250px;
             height: 250px;
             background: url('../image/profile_pic.jpeg');
+            // background-attachment: fixed;
+            // background-size: cover;
             border-radius: 50%;
             border: solid 5px #0066ff;
         }

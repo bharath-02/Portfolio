@@ -293,7 +293,7 @@ main#skills h1 {
 
 .container {
   width: 550px;
-  height: 400px;
+  height: 550px;
   position: relative;
   overflow: hidden; }
 
@@ -424,9 +424,7 @@ main#skills h1 {
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   main#home h1 {
-    font-size: 4rem; }
-  .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    font-size: 4rem; } }
 
 @media screen and (max-width: 768px) {
   #bg-img {
@@ -499,6 +497,17 @@ main#skills h1 {
     flex-direction: column; }
     .projects .item {
       width: 100%; }
+  .container {
+    width: 100%;
+    height: 300px; }
+  .caption h1 {
+    font-size: 15px; }
+  .caption h5 {
+    font-size: 10px; }
+  .caption h3 {
+    font-size: 12px; }
+  .caption ul {
+    font-size: 10px; }
   main#education h1 {
     font-size: 3.2rem; }
   main#contact h1 {

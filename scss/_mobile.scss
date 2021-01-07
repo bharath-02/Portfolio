@@ -11,9 +11,6 @@
     main#home h1 {
         font-size: 4rem;
     }
-    .projects {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 // Tablets & Small Laptops
@@ -113,6 +110,27 @@
         flex-direction: column;
         .item {
             width: 100%;
+        }
+    }
+    .container {
+        width: 100%;
+        height: 300px;
+    }
+    .caption {
+        h1 {
+            font-size: 15px;
+        }
+        h5 {
+            font-size: 10px;
+        }
+        h3 {
+            font-size: 12px;
+        }
+        ul {
+            font-size: 10px;
+        }
+        a {
+            // width: 50%;
         }
     }
     main#education h1 {
